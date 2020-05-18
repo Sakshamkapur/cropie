@@ -1,38 +1,307 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+body{
   background-color: #282c34;
-  min-height: 100vh;
+  color: #fff;
+}
+
+.container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
+  padding-bottom: 5%;
+}
+
+.d-none{
+  display: none;
+}
+
+.media{
+  width: 1024px;
+  height: 1024px;
+  position: relative;
+  margin: 5% 0 0 3%;
+}
+.media img{
+  width: 100%;
+  height: 100%;
+}
+.media .vertical,.horizontal,.gallery,.custom{
+  position: absolute;
+  border: 2px solid #ccc;
+  cursor: move;
+}
+
+.vertical{
+  width: 365px;
+  height: 450px;
+}
+.horizontal.small{
+  width: 365px;
+  height: 212px;
+}
+.horizontal{
+  width: 755px;
+  height: 450px;
+}
+.gallery{
+  width: 380px;
+  height: 380px;
+}
+.preview{
+  margin-left: 5%;
+  padding-right: 5%;
+}
+.preview canvas{
+  top: 20%;
+  position: sticky;
+}
+
+.actions{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 15px 0;
+}
+.actions .active{
+  color: #fff;
+  background-color: black;
 }
 
-.App-link {
-  color: #61dafb;
+.actions button{
+  padding: 10px 20px;
+  border:none;
+  background-color: #ccc;
+  font-size: 18px;
+  color: #000000;
+  border-radius: 3px;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.success{
+  color: #fff;
+  background-color: green!important;
+}
+.danger{
+  color: #fff;
+  background-color: red!important;
+}
+.actions button:active{
+  border-radius: 3px;
+  border: 1px solid #282c34;
+}
+.actions button:not(.active):hover{
+  color: #fff;
+  background-color: black;
+}
+.actions div{
+  margin: 0 20px;
+}
+.actions .mr{
+  margin-right: 5px;
 }
 
-@keyframes App-logo-spin {
+/* uploadercss start */
+
+@keyframes fadeInDown {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(-30px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0px);
   }
+}
+@keyframes bounce {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+.image-uploader-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 100vh;
+}
+.image-uploader-wrapper .display-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fbfbfb;
+  height: 60vh;
+  width: 60vw;
+  padding: 20px;
+}
+.image-uploader-wrapper .icon-text-box, .image-uploader-wrapper .display-box.drag-over .icon-text-box {
+  background-color: #96a599;
+  cursor: pointer;
+  color: #282c34;
+  text-shadow: 0px 1px 0 #999;
+}
+.image-uploader-wrapper .icon-text-box .upload-icon, .image-uploader-wrapper .display-box.drag-over .icon-text-box .upload-icon {
+  transform: translateY(-20px);
+  animation: bounce 1s ease-in-out infinite;
+}
+.image-uploader-wrapper .display-box .icon-text-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-width: 4px;
+  border-style: dashed;
+  border-color: #444;
+  width: 100%;
+  height: 100%;
+  text-shadow: 0px 0px 0 #999;
+  transition: background-color 0.2s ease-in, color 0.2s ease-in, border-color 0.2s ease-in, text-shadow 0.2s ease-in;
+}
+.image-uploader-wrapper .display-box .icon-text-box .upload-icon {
+  width: 100px;
+  height: 100px;
+  margin: 50px;
+  box-sizing: border-box;
+  transform: translateY(0px);
+  transition: transform 0.2s ease-in-out;
+}
+.image-uploader-wrapper .display-box .icon-text-box .upload-icon i.fa.fa-upload {
+  width: 100px;
+  height: 100px;
+  font-size: 100px;
+}
+.image-uploader-wrapper .display-box .icon-text-box .upload-button, .image-uploader-wrapper .display-box .icon-text-box .cancel-upload-button {
+  margin: 0 10px;
+  position: relative;
+  z-index: 9999;
+}
+.image-uploader-wrapper .display-box .icon-text-box .error-notification {
+  animation: fadeInDown 0.5s;
+  position: absolute;
+  top: 20px;
+  background-color: #dfb852;
+  border-radius: 5px;
+  color: #444;
+  padding: 5px 10px;
+}
+.image-uploader-wrapper .display-box .icon-text-box .error-notification p {
+  margin: 0;
+  text-shadow: none;
+}
+.image-uploader-wrapper .display-box .upload-image-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.upload-text{
+  font-weight: 700;
+}
+
+.rules{
+  color: whitesmoke;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+
+
+/* uploader css end */
+
+/* viewer image start */
+
+.masonry {
+  line-height: 0;
+  margin: 0 auto;
+  width: 80vw;
+  -webkit-column-gap: 2rem;
+     -moz-column-gap: 2rem;
+          column-gap: 2rem;
+}
+@media (min-width: 38em) {
+  .masonry {
+    -webkit-columns: 3 0;
+       -moz-columns: 3 0;
+            columns: 3 0;
+  }
+}
+
+.aspect {
+  margin-bottom: 2rem;
+  display: inline-block;
+  height: auto;
+  width: 100%;
+  max-width: 480px;
+  position: relative;
+}
+.aspect img {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: middle;
+  transition: transform 0.5s ease;
+}
+
+.aspect img:hover{
+  transform: scale(1.1);
+}
+.aspect:hover .download{
+  bottom: 20px;
+  visibility: visible;
+}
+
+.aspect .download{
+  position: absolute;
+  bottom: 0;
+  visibility: hidden;
+  left: 50%;
+  font-size: 18px;
+  font-weight: 700;
+  transform: translate(-50%,0);
+  transition: bottom 0.5ms ease;
+  cursor: pointer;
+}
+
+.back{
+  font-size: 44px;
+  font-weight: 700;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+/* uploader image end */
+
+.custominp{
+  position: absolute;
+  top: 65px;
+  width: 12%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.custominp span{
+  font-size: 700;
+}
+
+.custominp input{
+  width: 75px;
+  height: 30px;
+  padding: 0px 4px;
+  border: none;
+  border-radius: 5px;
 }
