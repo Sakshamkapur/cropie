@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Sakshamkapur/cropie/static/css/main.3b0c3e93.chunk.css",
+    "main.js": "/Sakshamkapur/cropie/static/js/main.9c913f25.chunk.js",
+    "main.js.map": "/Sakshamkapur/cropie/static/js/main.9c913f25.chunk.js.map",
+    "runtime-main.js": "/Sakshamkapur/cropie/static/js/runtime-main.1627923a.js",
+    "runtime-main.js.map": "/Sakshamkapur/cropie/static/js/runtime-main.1627923a.js.map",
+    "static/js/2.bb6027da.chunk.js": "/Sakshamkapur/cropie/static/js/2.bb6027da.chunk.js",
+    "static/js/2.bb6027da.chunk.js.map": "/Sakshamkapur/cropie/static/js/2.bb6027da.chunk.js.map",
+    "index.html": "/Sakshamkapur/cropie/index.html",
+    "precache-manifest.c3b6e86c30380dd87e7a0e68360fdef6.js": "/Sakshamkapur/cropie/precache-manifest.c3b6e86c30380dd87e7a0e68360fdef6.js",
+    "service-worker.js": "/Sakshamkapur/cropie/service-worker.js",
+    "static/css/main.3b0c3e93.chunk.css.map": "/Sakshamkapur/cropie/static/css/main.3b0c3e93.chunk.css.map",
+    "static/js/2.bb6027da.chunk.js.LICENSE.txt": "/Sakshamkapur/cropie/static/js/2.bb6027da.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1627923a.js",
+    "static/js/2.bb6027da.chunk.js",
+    "static/css/main.3b0c3e93.chunk.css",
+    "static/js/main.9c913f25.chunk.js"
+  ]
+}
