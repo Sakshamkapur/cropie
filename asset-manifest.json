@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Sakshamkapur/cropie/static/css/main.3b0c3e93.chunk.css",
-    "main.js": "/Sakshamkapur/cropie/static/js/main.9c913f25.chunk.js",
-    "main.js.map": "/Sakshamkapur/cropie/static/js/main.9c913f25.chunk.js.map",
-    "runtime-main.js": "/Sakshamkapur/cropie/static/js/runtime-main.1627923a.js",
-    "runtime-main.js.map": "/Sakshamkapur/cropie/static/js/runtime-main.1627923a.js.map",
-    "static/js/2.bb6027da.chunk.js": "/Sakshamkapur/cropie/static/js/2.bb6027da.chunk.js",
-    "static/js/2.bb6027da.chunk.js.map": "/Sakshamkapur/cropie/static/js/2.bb6027da.chunk.js.map",
-    "index.html": "/Sakshamkapur/cropie/index.html",
-    "precache-manifest.c3b6e86c30380dd87e7a0e68360fdef6.js": "/Sakshamkapur/cropie/precache-manifest.c3b6e86c30380dd87e7a0e68360fdef6.js",
-    "service-worker.js": "/Sakshamkapur/cropie/service-worker.js",
-    "static/css/main.3b0c3e93.chunk.css.map": "/Sakshamkapur/cropie/static/css/main.3b0c3e93.chunk.css.map",
-    "static/js/2.bb6027da.chunk.js.LICENSE.txt": "/Sakshamkapur/cropie/static/js/2.bb6027da.chunk.js.LICENSE.txt"
+    "main.css": "/cropie/static/css/main.3b0c3e93.chunk.css",
+    "main.js": "/cropie/static/js/main.7428fdda.chunk.js",
+    "main.js.map": "/cropie/static/js/main.7428fdda.chunk.js.map",
+    "runtime-main.js": "/cropie/static/js/runtime-main.4cb12c70.js",
+    "runtime-main.js.map": "/cropie/static/js/runtime-main.4cb12c70.js.map",
+    "static/js/2.bb6027da.chunk.js": "/cropie/static/js/2.bb6027da.chunk.js",
+    "static/js/2.bb6027da.chunk.js.map": "/cropie/static/js/2.bb6027da.chunk.js.map",
+    "index.html": "/cropie/index.html",
+    "precache-manifest.8400d448368a377896d02dbf0b146d47.js": "/cropie/precache-manifest.8400d448368a377896d02dbf0b146d47.js",
+    "service-worker.js": "/cropie/service-worker.js",
+    "static/css/main.3b0c3e93.chunk.css.map": "/cropie/static/css/main.3b0c3e93.chunk.css.map",
+    "static/js/2.bb6027da.chunk.js.LICENSE.txt": "/cropie/static/js/2.bb6027da.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.1627923a.js",
+    "static/js/runtime-main.4cb12c70.js",
     "static/js/2.bb6027da.chunk.js",
     "static/css/main.3b0c3e93.chunk.css",
-    "static/js/main.9c913f25.chunk.js"
+    "static/js/main.7428fdda.chunk.js"
   ]
 }
