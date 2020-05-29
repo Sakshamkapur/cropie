@@ -1,4 +1,4 @@
-import React,{ useState,useEffect,useRef, Profiler} from 'react';
+import React,{ useState,useEffect,useRef} from 'react';
 import Draggable from 'react-draggable';
 import {storage} from '../firebase';
 
@@ -115,13 +115,6 @@ export default function Cropper(props){
             <button className={name === activeTab?"btn mr active":"btn mr"} onClick={()=>{setCoordinate({x:options[name].initialX,y:options[name].initialY}); setActiveTab(name) }} >{name}</button>
           ))}
 
-          {/* {activeTab === "custom"&&<div className="custominp">
-              <input type="number" value={custom.w} onChange={(e)=>setCustom({h: custom.h,w: e.target.value})} placeholder="width" />
-              <span>x</span>
-              <input type="number" value={custom.h} onChange={(e)=>setCustom({w: custom.w,h: e.target.value})} placeholder="height" />
-            </div>
-          }
-     */}
           <div>
             <button className="btn active mr" onClick={()=>download()}>Download</button>
             <button className="btn success mr" onClick={handleUpload}>Upload {isUploading &&<span>{" "+progress+"%"}</span>}</button>
@@ -135,7 +128,7 @@ export default function Cropper(props){
                 <div className={activeTab}>
                 </div>
               </Draggable>
-              <img src={filename} onLoad={getDimensions} />
+              <img src={filename} alt="" onLoad={getDimensions} />
             </div>
           </div>
           <div className="preview" ref={preview}></div>
